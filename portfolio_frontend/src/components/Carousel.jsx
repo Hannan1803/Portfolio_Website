@@ -7,7 +7,7 @@ import { Navigation } from 'swiper/modules';
 
 const Carousel = () => {
   return (
-    <div className="hidden rounded-lg sm:block w-full max-h-[400px] overflow-hidden md:m-10 hover:scale-105 transition-all duration-300 ease-in-out hover:rounded-[20%]">
+    <div className="hidden rounded-lg sm:block w-full max-h-[400px] overflow-hidden md:m-10 hover:scale-95 transition-all duration-300 ease-in-out">
         <Swiper
             modules={[Navigation]}
             spaceBetween={30}

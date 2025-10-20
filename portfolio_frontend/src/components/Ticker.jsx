@@ -9,14 +9,14 @@ const Ticker = () => {
             <div className="ticker-track inline-block animate-scroll px-4 py-4 roboto-rt">
                 <span className="mx-4">● HTML</span>
                 <span className="mx-4">● Tailwind CSS</span>
-                <span className="mx-4">● React.js</span>
+                <span className="mx-4">● React JS</span>
                 <span className="mx-4">● Node.js</span>
                 <span className="mx-4">● Javascript</span>
                 <span className="mx-4">● Core Java</span>
                 <span className="mx-4">● SQL</span>
                 <span className="mx-4">● NOSQL</span>
                 <span className="mx-4">● Data Structures and Algorithms</span>
-                <span className="mx-4">● Version Control(GitHub)</span>
+                <span className="mx-4">● Version Control (GitHub)</span>
                 <span className="mx-4">● Docker</span>
                 <span className="mx-4">● Azure</span>
             </div>
