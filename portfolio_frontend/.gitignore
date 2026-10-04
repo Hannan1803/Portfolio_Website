@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
+/Hannan_resume.pdf
 
 # Editor directories and files
 .vscode/*

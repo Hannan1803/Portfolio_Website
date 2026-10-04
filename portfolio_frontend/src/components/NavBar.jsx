@@ -1,50 +1,53 @@
-import React, { useState } from 'react'
-import { Mail,Phone,Share2,Github,Linkedin } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { ArrowUpRight, Github, Linkedin, Menu } from 'lucide-react'
 
+const sections = [
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Certifications', href: '#certifications' },
+]
 
-const NavBar = () => {
-  return (
-    <>
-        <div className='flex justify-between p-8'>
-            <h1 className='special-gothic-expanded-one-regular text-sm'>HANNAN</h1>
+const NavBar = () => (
+  <header className="site-header">
+    <a className="wordmark" href="#home" aria-label="Hannan, home">
+      H<span>.</span>
+    </a>
 
-            <ul className='hidden md:flex gap-10 special-gothic-expanded-one-regular text-sm'>
-                <li className='hover:cursor-pointer'>Home</li>
-                <li className='hover:cursor-pointer'>About me</li>
-                <li className='hover:cursor-pointer'>Projects</li>
-            </ul>
+    <nav className="desktop-nav" aria-label="Main navigation">
+      {sections.map((section) => (
+        <a key={section.href} href={section.href}>
+          {section.label}
+        </a>
+      ))}
+    </nav>
 
-            <ul className='hidden md:flex gap-6 special-gothic-expanded-one-regular text-sm items-center'>
-              <li>
-                <a href="https://github.com/Hannan1803">
-                  <Github 
-                    className="text-black hover:cursor-pointer transition duration-300 hover:text-gray-500" 
-                    width={30}
-                  />
-                  </a>
-              </li>
+    <div className="header-actions">
+      <a className="social-link" href="https://github.com/Hannan1803" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <Github size={17} strokeWidth={1.7} />
+      </a>
+      <a className="social-link" href="https://www.linkedin.com/in/muhammad-haniif-hannan-s-731943289/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <Linkedin size={17} strokeWidth={1.7} />
+      </a>
+      <a className="contact-link" href="#contact">
+        Let&apos;s talk <ArrowUpRight size={15} />
+      </a>
+    </div>
 
-              <li>
-                <a href="https://www.linkedin.com/in/muhammad-haniif-hannan-s-731943289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                  <Linkedin
-                    className="text-black hover:cursor-pointer transition duration-300 hover:text-[#5c39e9]"
-                    width={30}
-                  />
-                </a>
-              </li>
-              
-              <li>
-                <Share2
-                  className="text-black hover:cursor-pointer transition duration-300 hover:text-green-600"
-                  width={30}
-                />
-              </li>
-            </ul>
-        </div>
-    </>
-  )
-}
+    <details className="mobile-menu">
+      <summary aria-label="Open navigation menu">
+        <Menu size={21} />
+      </summary>
+      <nav aria-label="Mobile navigation">
+        {sections.map((section) => (
+          <a key={section.href} href={section.href}>
+            {section.label}
+          </a>
+        ))}
+        <a href="#contact">Contact</a>
+      </nav>
+    </details>
+  </header>
+)
 
 export default NavBar
