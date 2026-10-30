@@ -1,22 +1,38 @@
-import React from 'react'
-// import { Phone, Share2, Instagram, Twitter, Facebook } from 'lucide-react';
-import Carousel from './Carousel'
+import { ArrowDown, ArrowUpRight } from 'lucide-react'
+import SkillsMarquee from './SkillsMarquee'
 
-const Content = () => {
-  return (
-    <>
-        <div className='flex justify-between p-8'>
-            <div className='flex flex-col w-1/2'>
-                <h1 className='main-theme text-base lg:text-8xl special-gothic-expanded-one-regular text-8xl font-semibold font-small'>Crafting Seamless Digital Experiences</h1>
-                <p className='main-theme roboto-rt mt-2'>From pixel-perfect frontends to powerful backend architectures, I deliver end-to-end full stack solutions tailored to bring your vision to life. Whether it's building dynamic web apps, responsive interfaces, or scalable APIs—I blend clean code with creative design to create digital products that don't just work, but <i>wow.</i></p>
-            </div>
+const Content = () => (
+  <section className="hero" id="home" aria-labelledby="hero-title">
+    <div className="hero-topline">
+      <span className="eyebrow"><span className="status-dot" /> DEVOPS ENGINEER · CHENNAI, INDIA</span>
+      <span className="hero-index">PORTFOLIO — 2025 / 26</span>
+    </div>
 
-            <div className='cor-theme items-center justify-center hidden md:flex w-1/2 h-[400px] overflow-hidden rounded-xl'>
-                <Carousel></Carousel>
-            </div>
-        </div>
-    </>
-  )
-}
+    <div className="hero-stage">
+        <h1 className="hero-heading" id="hero-title">
+        <span className="hero-word hero-word-left">Reliable</span>
+        <SkillsMarquee />
+        <span className="hero-word hero-word-right">by design.</span>
+      </h1>
+
+      {/* <SkillsMarquee /> */}
+
+      <div className="hero-intro">
+        <p className="eyebrow">CLOUD · AUTOMATION · DELIVERY</p>
+        <p className="hero-description">
+          I build secure Azure platforms and dependable delivery workflows that help teams ship with confidence.
+        </p>
+        <a className="text-link" href="#experience">Explore my work <ArrowUpRight size={16} /></a>
+      </div>
+
+      <div className="hero-side-note">
+        <span className="side-note-mark">01 / 04</span>
+        <span>Infrastructure<br />that moves work forward.</span>
+      </div>
+    </div>
+
+    <a className="scroll-cue" href="#about"><ArrowDown size={15} /> SCROLL TO EXPLORE</a>
+  </section>
+)
 
 export default Content
